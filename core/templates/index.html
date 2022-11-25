@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Divinu´s Lanches</title>
+    <link rel=" stylesheet" href=" {% static 'css/estilos.css' %} ">
+</head>
+<body>
+    <center>
+    <h1>Olá, Seja bem vindos à Divinu´s Lanches.</h1><br>
+    <p><h2>Será um prazer atender você!</h2></p>
+    <p>{{curso}}</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Lanches</th>
+            <th>Preço</th>
+        </tr>
+        </thead>
+        <tbody>
+            <image src="{% static 'images/logo.jpg' %}">
+            {% for lanches1 in produto %}
+                <tr>
+                    <td><a href="{% url 'produto' lanches1.id%}">{{lanches1.produto}}</td></a>
+                    <td>{{lanches1.valor}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="teste();">Confirmar!</button>
+        </center>
+    <script type="text/javascript" src="{% static 'js/script.js'%} "></script>
+</body>
+</html>

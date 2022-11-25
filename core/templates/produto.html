@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divinus lanches</title>
+    <link rel=" stylesheet" href=" {% static 'css/estilos.css' %} ">
+</head>
+<body>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Lanches</th>
+            <th>Preço</th>
+        </tr>
+        </thead>
+        <tbody>
+            <image src="{% static 'images/logodivi.jpg' %}">
+                <tr>
+                    <td><a href="{% url 'index' %}">{{lanches1.produto}}</td></a>
+                    <td>{{lanches1.valor}}</td>
+                </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
